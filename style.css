@@ -1,0 +1,27 @@
+@import url("./styles/reset.css");
+@import url("./styles/header.css");
+@import url("./styles/banner.css");
+@import url("./styles/container.css");
+@import url("./styles/competencias.css");
+@import url("./styles/projetos.css");
+@import url("./styles/footer.css");
+
+:root {
+    --cor-das-sections: #360C0B;
+    --cor-de-fundo: #180605;
+    --cor-das-letras: #FFFFFF;
+    --cor-degrade: linear-gradient(110.49deg, #360C0B 19.95%, #532322 78.06%, #5E1B19 107.08%);
+    --fonte-righteous: 'Righteous';
+    --fonte-inconsolata: 'Inconsolata';
+    --fonte-poppins: 'Poppins';
+    --cor-detalhes: #DE3948;
+    --cor-textos: #D3AF67;
+
+}
+
+body {
+    background: var(--cor-de-fundo);
+    color: var(--cor-das-letras);
+    font-size: 18px;
+    height: 100vh;
+}
