@@ -1,0 +1,100 @@
+
+.materiais {
+    background: var(--cor-de-fundo);
+    width: 100%;
+    text-align: center;
+}
+
+.materiais__título {
+    font-family: var(--fonte-poppins);
+    font-weight: 800;
+    font-size: 35px;
+    padding: 2em 0 0 0;
+}
+
+.materiais__card {
+    background-color: var(--cor-das-sections);
+    padding: 2em;
+    margin: 1em 4em 4em 4em;
+    border-radius: 15px;
+    box-shadow: 4px 7px 26px rgba(0, 0, 0, 0.12);
+}
+
+.materiais__texto {
+    font-family: var(--fonte-inconsolata);
+    color: var(--cor-textos);
+}
+
+.materiais__div__tabela {
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--cor-de-fundo);
+    border-radius: 15px;
+    box-shadow: 4px 7px 26px rgba(0, 0, 0, 0.12);
+    border: 1px solid var(--cor-das-letras);
+    overflow-x: scroll;
+}
+
+.materiais__div__tabela::-webkit-scrollbar {
+    display: none;
+  }
+
+  .materiais__div__tabela {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.table {
+    font-family: var(--fonte-inconsolata);
+    color: var(--cor-das-letras);
+    border-radius: 15px;
+    
+}
+
+.table thead tr th {
+    font-weight:bold;
+    font-family: var(--fonte-poppins);
+    border: 1px solid var(--cor-das-letras);
+    background-color: var(--cor-textos);
+    color: black;
+}
+
+
+.table tbody tr td {
+    border: 1px solid var(--cor-das-letras);
+    
+}
+
+.col-aula {
+    text-align: left;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+
+    .materiais__card {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .materiais__título {
+        padding: 1em 0;
+
+    }
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .materiais__título {
+
+        padding: 1em 0;
+
+    }
+
+
+}
+

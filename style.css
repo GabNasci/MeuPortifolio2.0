@@ -5,6 +5,7 @@
 @import url("./styles/competencias.css");
 @import url("./styles/projetos.css");
 @import url("./styles/footer.css");
+@import url("./styles/materiais.css");
 
 :root {
     --cor-das-sections: #360C0B;

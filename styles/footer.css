@@ -5,6 +5,7 @@
     text-align: center;
     gap: 2em;
     padding: 0 6em 3em 6em;
+    background-color: var(--cor-das-sections);
 }
 
 .contato__título {
