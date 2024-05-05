@@ -59,6 +59,14 @@
     color: black;
 }
 
+.table tr th {
+    font-weight:bold;
+    font-family: var(--fonte-poppins);
+    border: 1px solid var(--cor-das-letras);
+    background-color: var(--cor-textos);
+    color: black;
+}
+
 
 .table tbody tr td {
     border: 1px solid var(--cor-das-letras);
