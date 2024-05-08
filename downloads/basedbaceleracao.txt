@@ -1,0 +1,97 @@
+insert into veiculos (modelo, ano, chassi, marca, cor, placa, tipo)
+values
+('celta sprint', '2006', 'weçibfohamefie37458', 'chevrolet', 'branco', 'srv-1980', 'carro'),
+('celta', '2007', 'weçibfohamefie37458', 'chevrolet', 'verde', 'srv-1980', 'carro'),
+('celta', '2008', 'weçibfohamefie37458', 'chevrolet', 'preto', 'srv-1980', 'carro'),
+('celta sprint', '2009', 'weçibfohamefie37458', 'chevrolet', 'amarelo', 'srv-1980', 'carro');
+
+
+update veiculos v
+set v.modelo ='Gol 1.0'
+where v.id = 5;
+
+drop table animal;
+
+create table especie(
+	id_especie int not null primary key auto_increment,
+	nome varchar(60)
+);
+
+insert into especie values(null, 'gato');
+insert into especie values(null, 'cachorro');
+
+select * from especie e 
+
+create table raca(
+	id_raca int not null primary key auto_increment,
+	nome varchar(60)
+);
+
+insert into raca values
+(null, 'vira lata'),
+(null, 'pastor alemao'),
+(null, 'pitbull'),
+(null, 'ilhasa');
+
+select * from raca r;
+
+alter table raca add column id_especie int;
+
+alter table raca 
+add constraint FK_id_especie
+foreign key (id_especie) references especie(id_especie);
+
+update raca set id_especie = 1;
+
+insert into raca values
+(null, 'siames', 2);
+
+create table animal (
+	id int not null primary key auto_increment,
+	nome varchar(100),
+	porte char(1),
+	sexo char(1),
+	peso decimal(15,2),
+	id_raca int not null,
+	foreign key (id_raca) references raca(id_raca)
+);
+
+select a.nome, a.peso, a.id_raca,
+case 
+	when a.sexo = 'M' then 'Macho'
+	when a.sexo = 'F' then 'Fêmea'
+	else 'Indefinido'
+end as 'sexo',
+case 
+	when a.porte = 'M' then 'Médio'
+	when a.porte = 'P' then 'Pequeno'
+	when a.porte = 'G' then 'Grande'
+	else 'Indefinido'
+end as 'porte'
+from animal a order by id_raca 
+
+insert into animal values(null, 'neguin', 'M', 'M', 15.5, 1);
+insert into animal values(null, 'betovem', 'G', 'M', 30, 1);
+insert into animal values(null, 'caramelo', 'P', 'F', 9, 1);
+insert into animal values(null, 'bixano', 'P', 'M', 10, 2);
+
+insert into animal values(null, 'ALFREDO', 'G', 'M', 20, 1);
+insert into animal values(null, 'Beterraba', 'P', 'F', 8, 1);
+insert into animal values(null, 'Linguado', 'P', 'M', 5, 2);
+insert into animal values(null, 'QUINTANA', 'P', 'F', 6, 2);
+insert into animal values(null, 'carlos', 'P', 'M', 9, 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
