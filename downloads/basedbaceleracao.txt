@@ -1,3 +1,15 @@
+CREATE TABLE `veiculos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `modelo` varchar(60) NOT NULL,
+  `ano` char(4) NOT NULL,
+  `chassi` varchar(200) NOT NULL,
+  `marca` varchar(60) NOT NULL,
+  `cor` varchar(60) NOT NULL,
+  `placa` varchar(15) DEFAULT NULL,
+  `tipo` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+
 insert into veiculos (modelo, ano, chassi, marca, cor, placa, tipo)
 values
 ('celta sprint', '2006', 'weçibfohamefie37458', 'chevrolet', 'branco', 'srv-1980', 'carro'),
@@ -5,12 +17,11 @@ values
 ('celta', '2008', 'weçibfohamefie37458', 'chevrolet', 'preto', 'srv-1980', 'carro'),
 ('celta sprint', '2009', 'weçibfohamefie37458', 'chevrolet', 'amarelo', 'srv-1980', 'carro');
 
-
 update veiculos v
 set v.modelo ='Gol 1.0'
 where v.id = 5;
 
-drop table animal;
+show create table veiculos
 
 create table especie(
 	id_especie int not null primary key auto_increment,
